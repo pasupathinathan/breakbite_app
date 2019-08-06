@@ -1,0 +1,95 @@
+<ion-content class="background">
+  <img class="circle-pic" src="assets/imgs/iogo.png">
+
+  <ion-card style="margin-top:40px;background-color: #0072BC">
+    <ion-card-content>
+      <form novalidate (ngSubmit)="Submit()" [formGroup]="details">
+        <ion-list no-lines>
+
+          <ion-item>
+            <ion-label floating color="light">Username</ion-label>
+            <ion-input type="text" [(ngModel)]="userData.username" formControlName="username" style="color:white"
+              [class.error1]="!details.controls.username.valid && details.controls.username.dirty"></ion-input>
+          </ion-item>
+          <ion-item no-lines
+            *ngIf="( details.get('username').hasError('pattern') ||details.get('username').hasError('required') ) && details.get('username').touched">
+            <div class="error" *ngIf="details.get('username').hasError('required') && details.get('username').touched">
+              *Enter your username
+            </div>
+            <div class="error" *ngIf="details.get('username').hasError('pattern') && details.get('username').touched">
+              *Just use alphabet character
+            </div>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating color="light">E-mail</ion-label>
+            <ion-input type="text" [(ngModel)]="userData.email" formControlName="email" style="color:white"
+              [class.error1]="!details.controls.email.valid && details.controls.email.dirty"></ion-input>
+          </ion-item>
+          <ion-item no-lines
+            *ngIf="( details.get('email').hasError('pattern') ||details.get('email').hasError('required') ) && details.get('email').touched">
+            <div class="error" *ngIf="details.get('email').hasError('required') && details.get('email').touched">
+              *Enter your email
+            </div>
+            <div class="error" *ngIf="details.get('email').hasError('pattern') && details.get('email').touched">
+              *Email address invalid
+            </div>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating color="light">Mobile Number</ion-label>
+            <ion-input type="tel" [(ngModel)]="userData.phone" formControlName="phone" style="color:white"
+              [class.error1]="!details.controls.phone.valid && details.controls.phone.dirty"></ion-input>
+          </ion-item>
+          <ion-item no-lines
+            *ngIf="( details.get('phone').hasError('pattern') ||details.get('phone').hasError('required') ) && details.get('phone').touched">
+            <div class="error" *ngIf="details.get('phone').hasError('required') && details.get('phone').touched">
+              *Enter your phone number
+            </div>
+            <div class="error" *ngIf="details.get('phone').hasError('pattern') && details.get('phone').touched">
+              *Phone number invalid<br>(e.g: 9876543210)
+            </div>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating color="light">Password</ion-label>
+            <ion-input type="password" [(ngModel)]="userData.password" formControlName="password" style="color:white">
+            </ion-input>
+          </ion-item>
+          <ion-item no-lines
+            *ngIf="( details.get('password').hasError('required') ) && details.get('password').touched">
+            <div class="error" *ngIf="details.get('password').hasError('required') && details.get('password').touched">
+              *Enter your password
+            </div>
+          </ion-item>
+          <ion-item>
+            <ion-label floating color="light">Address</ion-label>
+          <ion-textarea  [(ngModel)]="userData.address" formControlName="address" style="color:white"></ion-textarea>
+        </ion-item>
+        <ion-item no-lines
+        *ngIf="( details.get('address').hasError('required') ) && details.get('address').touched">
+        <div class="error" *ngIf="details.get('address').hasError('required') && details.get('address').touched">
+          *Enter your address
+        </div>
+      </ion-item>
+
+          <br /><br />
+          <button ion-button color="light" block outline [disabled]="details.invalid">Register</button>
+        </ion-list>
+      </form>
+      <button ion-button color="light" block outline (click)="login()">Login</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<style type="text/css">
+  .error {
+    color: rgb(235, 238, 83);
+    font-size: 13px;
+  }
+
+  .error1 {
+    color: rgb(75, 75, 75);
+    border-bottom: 1px solid #ff0000;
+  }
+</style>

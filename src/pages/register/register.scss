@@ -1,0 +1,39 @@
+page-register {
+
+    .background
+    {
+        width: 100%;
+        height: 100%;
+    } 
+    .scroll-content
+    {
+        text-align: center;
+    }
+    ion-card.card
+    {
+       
+        border-radius: 10px;
+       
+    }
+    .item
+    {
+        background: rgba(232, 230, 230, 0px);
+    }
+    ion-input{
+        border-bottom: white solid 1px;
+        color: white;
+    }
+    .color{
+        color: white;
+    }
+    
+    ion-label {
+        color:white;
+    }
+    
+    .circle-pic{
+       width:80px;
+       height:80px;
+       margin-top: 30px;
+    }
+}

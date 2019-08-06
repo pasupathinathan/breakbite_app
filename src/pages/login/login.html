@@ -1,0 +1,57 @@
+<ion-content class="background">
+  <img class="circle-pic" src="assets/imgs/logo.png">
+
+  <ion-card style="margin-top:40px;">
+    <ion-card-content>
+      <form novalidate (ngSubmit)="Submit()" [formGroup]="details">
+        <ion-list no-lines>
+          <ion-item>
+            <ion-label floating color="light">Mobile Number</ion-label>
+            <ion-input type="tel" [(ngModel)]="userData.phone" formControlName="phone" style="color:white"
+              [class.error1]="!details.controls.phone.valid && details.controls.phone.dirty"></ion-input>
+          </ion-item>
+          <ion-item no-lines
+            *ngIf="( details.get('phone').hasError('pattern') ||details.get('phone').hasError('required') ) && details.get('phone').touched">
+            <div class="error" *ngIf="details.get('phone').hasError('required') && details.get('phone').touched">
+              *Enter phone number
+            </div>
+            <div class="error" *ngIf="details.get('phone').hasError('pattern') && details.get('phone').touched">
+              *Phone number invalid<br>(e.g: 9876543210)
+            </div>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating color="light">Password</ion-label>
+            <ion-input type="password" [(ngModel)]="userData.password" formControlName="password" style="color:white">
+            </ion-input>
+          </ion-item>
+          <ion-item no-lines
+            *ngIf="( details.get('password').hasError('required') ) && details.get('password').touched">
+            <div class="error" *ngIf="details.get('password').hasError('required') && details.get('password').touched">
+              *Enter password
+            </div>
+          </ion-item>
+          <ion-item text-center >
+            <a (click)="forgot()" class="color">Forgot Password? <u>click</u></a>
+          </ion-item>
+          <button ion-button color="green" block outline class="color">Log in</button>
+        </ion-list>
+      </form>
+      <ion-item>
+        <ion-label text-center class="color">Not a Member?</ion-label>
+      </ion-item>
+      <button ion-button color="green" block outline (click)="register()" class="color">Create an Account</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<style type="text/css">
+  .error {
+    color: rgb(235, 238, 83);
+    font-size: 13px;
+  }
+
+  .error1 {
+    color: rgb(75, 75, 75);
+    border-bottom: 1px solid #ff0000;
+  }
+</style>

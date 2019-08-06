@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="header">
+    <ion-title>place Order</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>     
+        <ion-list style="margin-top:30px; margin-left: -10px;width:300px;" class="row" *ngFor="let item of items">
+            <ion-item style="margin-top: -51px;">
+              <ion-card>
+                  <img src="{{img}}" style="height: 90px;">
+                  <ion-card-content>
+                      <p>{{itemname}}&nbsp;&nbsp;{{amount}}&nbsp;&nbsp;<button ion-button (click)="pay()">pay now</button></p>
+                  <button ion-button (click)="delete()">delete</button>
+                    </ion-card-content>
+                
+              </ion-card>
+             </ion-item>
+          </ion-list>
+      
+        
+        
+</ion-content>
