@@ -1,7 +1,8 @@
-<ion-content class="background">
-  <img class="circle-pic" src="assets/imgs/logo.png">
+<ion-content class="background" style="background: url('assets/imgs/back.png') no-repeat center center fixed; -webkit-background-size: cover;
+-moz-background-size: cover; background-size: cover;">
+  
 
-  <ion-card style="margin-top:40px;">
+  <ion-card style="margin-top:200px;position: fixed;">
     <ion-card-content>
       <form novalidate (ngSubmit)="Submit()" [formGroup]="details">
         <ion-list no-lines>
@@ -34,13 +35,13 @@
           <ion-item text-center >
             <a (click)="forgot()" class="color">Forgot Password? <u>click</u></a>
           </ion-item>
-          <button ion-button color="green" block outline class="color">Log in</button>
+          <button ion-button color="light" block outline class="color">Log in</button>
         </ion-list>
       </form>
       <ion-item>
         <ion-label text-center class="color">Not a Member?</ion-label>
       </ion-item>
-      <button ion-button color="green" block outline (click)="register()" class="color">Create an Account</button>
+      <button ion-button color="light" block outline (click)="register()" class="color">Create an Account</button>
     </ion-card-content>
   </ion-card>
 </ion-content>

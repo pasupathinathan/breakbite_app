@@ -26,7 +26,7 @@ import { PurhisPage } from '../pages/purhis/purhis';
 import { MixDetailPage } from '../pages/mix-detail/mix-detail';
 import { SevDetailPage } from '../pages/sev-detail/sev-detail';
 import { OmmDetailPage } from '../pages/omm-detail/omm-detail';
-
+import { SuperTabsModule } from 'ionic2-super-tabs';
 
 
 
@@ -50,7 +50,7 @@ import { OmmDetailPage } from '../pages/omm-detail/omm-detail';
     BrowserModule,
     HttpModule,
     HttpClientModule,
-    
+    SuperTabsModule.forRoot(),
     IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp),
   ],

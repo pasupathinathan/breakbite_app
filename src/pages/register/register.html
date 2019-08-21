@@ -1,7 +1,8 @@
-<ion-content class="background">
-  <img class="circle-pic" src="assets/imgs/iogo.png">
+<ion-content class="background" style="background: url('assets/imgs/back2.png') no-repeat center center fixed; -webkit-background-size: cover;
+-moz-background-size: cover; background-size: cover;">
+  
 
-  <ion-card style="margin-top:40px;background-color: #0072BC">
+  <ion-card style="margin-top:150pt; background:rgba(87,0,0,0.5);">
     <ion-card-content>
       <form novalidate (ngSubmit)="Submit()" [formGroup]="details">
         <ion-list no-lines>
@@ -64,7 +65,8 @@
           </ion-item>
           <ion-item>
             <ion-label floating color="light">Address</ion-label>
-          <ion-textarea  [(ngModel)]="userData.address" formControlName="address" style="color:white"></ion-textarea>
+          <ion-textarea  [(ngModel)]="userData.address" formControlName="address" style="color:white">
+          </ion-textarea>
         </ion-item>
         <ion-item no-lines
         *ngIf="( details.get('address').hasError('required') ) && details.get('address').touched">

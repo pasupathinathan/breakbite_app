@@ -57,7 +57,7 @@ export class LoginPage implements OnInit {
 
   Submit() {
     this.showLoading1();
-    var link = 'http://localhost:81/projects/taxpare-web/api/login.php';
+    var link = 'http://finshub.com/api/login.php';
     var myData = JSON.stringify({
       phone: this.userData.phone, password: this.userData.password
     });

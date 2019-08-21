@@ -8,34 +8,44 @@
       </ion-header>
 
 <ion-content>
-    <form>
-  <ion-card (click)="det()">
+  
+    <ion-row>
+        <ion-col col-6>
+  <ion-card (click)="det()" style="height:150px;">
       <img src="assets/imgs/kadalai.jpg" style="height: 90px;">
       <ion-card-content>
-        
-         <h6 style="color: black;font-weight:700;font-family: 'Poppins', sans-serif;">கடலை மிட்டாய் &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-rupee"></i>  40 </h6>
-       
+         <h6 style="color: black;font-weight:700;font-family: 'Poppins',  sans-serif; font-size:10pt;">Kadalai Mittai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-rupee"></i>  40 </h6>
         </ion-card-content>
     </ion-card>
-</form>
-<ion-card (click)="mur()">
+  </ion-col>
+  <ion-col col-6>
+<ion-card (click)="mur()" style="height:150px;">
   <img src="assets/imgs/muru.jpg" style="height: 90px;">
   <ion-card-content>
-     <h6 style="color: black;font-weight:700;font-family: 'Poppins', sans-serif;">முறுக்கு&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-rupee"></i>  25</h6>
+     <h6 style="color: black;font-weight:700;font-family: 'Poppins', sans-serif;"><br>Murruku&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-rupee"></i> 25</h6>
+     
     </ion-card-content>
 </ion-card>
-<ion-card (click)="mix()">
+</ion-col>
+</ion-row>
+<ion-row>
+  <ion-col col-6>
+<ion-card (click)="mix()" style="height:150px;">
     <img src="assets/imgs/mix.jpg" style="height: 90px;">
     <ion-card-content>
-       <h6 style="color: black;font-weight:700;font-family: 'Poppins', sans-serif;">மிக்சர் &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-rupee"></i>  25</h6>
+       <h6 style="color: black;font-weight:700;font-family: 'Poppins', sans-serif;"><br>Mixture &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-rupee"></i>  25</h6>
       </ion-card-content>
   </ion-card>
-  <ion-card (click)="omm()">
+</ion-col>
+<ion-col col-6>
+  <ion-card (click)="omm()" style="height:150px;">
       <img src="assets/imgs/omum.jpg" style="height: 90px;">
       <ion-card-content>
-         <h6 style="color: black;font-weight:700;font-family: 'Poppins', sans-serif;">ஓமம் பொடி &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-rupee"></i>  25</h6>
+         <h6 style="color: black;font-weight:700;font-family: 'Poppins', sans-serif;"><br>Ommapodi &nbsp;&nbsp;<i class="fa fa-rupee"></i>  25</h6>
         </ion-card-content>
     </ion-card>
+  </ion-col>
+  </ion-row>
     <ion-card (click)="sev()">
         <img src="assets/imgs/sav.jpg" style="height: 90px;">
         <ion-card-content>
